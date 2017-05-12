@@ -1,8 +1,17 @@
 var express = require('express');
 var app = express();
 
+
+
 var twilio = require('twilio');
 
+//	generate	token
+app.get('/auth',function(req,res){
+	var token = new twilio.jwt.ClientCapability({
+		//	accountSid :
+		//	authToken  :
+	})
+});
 
 app.get('/',function(req,res){
 	var resp = new twilio.twiml.VoiceResponse();
